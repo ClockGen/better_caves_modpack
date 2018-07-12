@@ -1,0 +1,10 @@
+better_caves_spread_x (Cave X size multiplier) float 1
+better_caves_spread_y (Cave Y size multiplier) float 0.5
+better_caves_spread_z (Cave Z size multiplier) float 1
+better_caves_seed (Perlin noise seed) int 55555
+better_caves_offset (Perlin noise value offset) float 0.5
+better_caves_scale (Perlin noise scale multiplier) float 0.5
+better_caves_debug (better_caves_api debug mode) bool false
+better_caves_highlimit (Caves global high limit) int -64
+better_caves_lowlimit (Caves global low limit) int -30000
+
