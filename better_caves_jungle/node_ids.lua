@@ -1,0 +1,6 @@
+better_caves.register_node_id("jungle_soil", "better_caves_jungle:jungle_soil")
+better_caves.register_node_id("jungle_wall", "better_caves_jungle:jungle_wall")
+better_caves.register_node_id("jungle_glow_plant", "better_caves_jungle:jungle_glow_plant")
+better_caves.register_node_id("jungle_grass_01", "better_caves_jungle:jungle_grass_01")
+better_caves.register_node_id("jungle_tree", "better_caves_jungle:jungle_tree")
+better_caves.register_node_id("jungle_vine_01", "better_caves_jungle:jungle_vine_01")

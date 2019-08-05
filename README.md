@@ -1,5 +1,7 @@
 #### WIP
 
+Temporarily stalled
+
 ## License
-Code: LGPL v3  
-Assets: CC-BY-SA 3.0  
+Code: GPL v3  
+Assets: CC BY 4.0  

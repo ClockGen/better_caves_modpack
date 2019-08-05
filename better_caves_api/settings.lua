@@ -8,6 +8,9 @@ better_caves.settings.debug = minetest.settings:get("better_caves_debug") or fal
 better_caves.settings.highlimit = minetest.settings:get("better_caves_highlimit") or -64
 better_caves.settings.lowlimit = minetest.settings:get("better_caves_lowlimit") or -30000
 
+better_caves.settings.blend_threshold = minetest.settings:get("better_caves_blend_threshold") or 0.05
+
+
 
 
 

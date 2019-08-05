@@ -7,4 +7,6 @@ better_caves_scale (Perlin noise scale multiplier) float 0.5
 better_caves_debug (better_caves_api debug mode) bool false
 better_caves_highlimit (Caves global high limit) int -64
 better_caves_lowlimit (Caves global low limit) int -30000
+better_caves_lowlimit (Caves global low limit) int -30000
 
+better_caves_blend_threshold (Biome blending threshold value) float 0.05

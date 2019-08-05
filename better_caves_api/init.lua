@@ -75,16 +75,25 @@ minetest.register_on_generated(function(minp, maxp, seed)
                 nv = nvals_terrain[ni]
                 
                 --Generating only on noise values of 0-1
-                if not (nv <= 0) and not (nv > 1) then
+                if not (nv <= 0) then
+                    
+                    if nv > 1 then nv = 1 end
+                    
                 
                     --Determining a biome, biomes are mapped to the range of perlin values of 0 < x < 1
                     for k = 0, biome_n do 
                         if k/biome_n >= nv then
-                            biome = better_caves.biomes[k]
+                            -- Blending biomes towards biome threshold values
+                            local grad = k/biome_n - nv
+                            if grad <= better_caves.settings.blend_threshold and math.random(1 + (math.floor(300 * grad) ^ (0.5/3)) ) == 1 and k ~= biome_n then
+                                biome = better_caves.biomes[k + 1]
+                            else
+                                biome = better_caves.biomes[k]
+                            end
                             break
                         end
                     end
-
+                    
                     -- Biome specific height check
                     if minp.y <= biome.lowlimit or maxp.y >= biome.highlimit then return end
 
@@ -136,12 +145,6 @@ minetest.register_on_generated(function(minp, maxp, seed)
                     data[vi + 1] == better_caves.c_air or data[vi - 1] == better_caves.c_air) then
                         data[vi] = biome.wall_node
                     end
-
-                    --Dungeon spawning
---                     if data[vi] == better_caves.c_stone and math.random(biome.dungeon_chance) == 1 then
---                         local room = biome.dungeon_schematics[math.random(#biome.dungeon_schematics)]
---                         table.insert(cache, {x=x, y=y, z=z, schematic=room, overwrite=true})
---                     end
 
                     --Floor schematics
                     if data[vi] == biome.floor_node and (data[vi + area.ystride] == better_caves.c_air or data[vi + area.ystride] == tempnode) and math.random(biome.floor_schematic_chance) == 1 then

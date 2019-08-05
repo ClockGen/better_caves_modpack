@@ -15,3 +15,4 @@ better_caves.register_schematic(mdnm, "/schematics/bc_gills_glow_9.mts", "gillsg
 better_caves.register_schematic(mdnm, "/schematics/bc_stalk_3.mts", "stalk3") 
 better_caves.register_schematic(mdnm, "/schematics/bc_stalk_5.mts", "stalk5") 
 better_caves.register_schematic(mdnm, "/schematics/bc_stalk_10.mts", "stalk10") 
+better_caves.register_schematic(mdnm, "/schematics/bc_stalk_10.mts", "mushroom51")
